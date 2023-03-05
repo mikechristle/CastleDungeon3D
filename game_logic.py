@@ -151,6 +151,17 @@ def click(key):
 
 
 # ---------------------------------------------------------------------------
+def check_alarm_timer():
+    """Check the three minute bomb timer."""
+
+    if st.game_active and (time() - st.run_time) >= 180.0:
+        st.game_active = False
+        st.message = 'The alarm sounded and you were captured.'
+        st.run_time = 180.0
+        alarm.play()
+
+
+# ---------------------------------------------------------------------------
 def move_monster():
     """Randomly move a monster."""
 

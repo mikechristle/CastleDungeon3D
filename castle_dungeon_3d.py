@@ -10,7 +10,7 @@ from random import randrange
 from make_maze import make_maze
 from paint import paint, paint_intro
 from view_3d import make_3d_view
-from game_logic import click, move_monster
+from game_logic import click, move_monster, check_alarm_timer
 from time import time
 
 
@@ -50,6 +50,7 @@ def main():
                 # One second timer to move monsters
                 case [pg.USEREVENT, True]:
                     move_monster()
+                    check_alarm_timer()
                     make_3d_view()
                     paint()
 
