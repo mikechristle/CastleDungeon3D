@@ -125,6 +125,7 @@ def click(key):
             else:
                 fight.play()
                 st.grid[y][x] = 0
+                st.monsters.remove((x, y))
                 st.sword_count -= 1
                 st.monster_count += 1
 
