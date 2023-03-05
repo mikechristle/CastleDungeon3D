@@ -12,7 +12,7 @@ VIEW_HALF_HEIGHT = VIEW_HEIGHT // 2
 
 # Initialize pygame and setup the window
 pg.init()
-pg.display.set_caption("Castle Dungeon 3D  V1.0")
+pg.display.set_caption("Castle Dungeon 3D  V1.1")
 
 screen = pg.display.set_mode((VIEW_WIDTH, VIEW_HEIGHT))
 view_image = pg.Surface((VIEW_WIDTH, VIEW_HEIGHT))
