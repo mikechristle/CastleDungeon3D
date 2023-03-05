@@ -61,8 +61,6 @@ def fill_grid():
 
     # Position the player in the corner of the maze
     st.game_active = True
-    st.pos_x = st.GRID_CELL // 2
-    st.pos_y = st.GRID_CELL // 2
     st.angle = 0
     st.sword_count = 0
     st.coin_count = 0
@@ -124,6 +122,13 @@ def fill_grid():
     add_object(st.SWORD, 4)
     add_object(st.PIT, 4)
     add_object(st.ROPE, 4)
+
+    # Place the prisoner at a ramdom location
+    while True:
+        st.pos_x = randrange(st.GRID_SIZE)
+        st.pos_y = randrange(st.GRID_SIZE)
+        if st.grid[st.pos_y][st.pos_x] == 0:
+            break
 
 
 # ---------------------------------------------------------------------------
